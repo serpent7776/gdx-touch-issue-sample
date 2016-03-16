@@ -7,12 +7,15 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class GdxSample extends ApplicationAdapter {
 
 	Stage stage;
 	SpriteBatch batch;
 	Texture img;
+	Image image1;
+	Image image2;
 
 	@Override
 	public void create() {
@@ -20,6 +23,10 @@ public class GdxSample extends ApplicationAdapter {
 		Gdx.input.setInputProcessor(stage);
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
+		image1 = new Image(img);
+		image2 = new Image(img);
+		stage.addActor(image1);
+		stage.addActor(image2);
 	}
 
 	@Override
