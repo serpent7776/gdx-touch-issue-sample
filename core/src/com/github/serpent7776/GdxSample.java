@@ -4,11 +4,15 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.utils.viewport.ScreenViewport;
 
 public class GdxSample extends ApplicationAdapter {
+
+	private static final String TAG = GdxSample.class.getSimpleName();
 
 	Stage stage;
 	Texture img;
@@ -28,6 +32,22 @@ public class GdxSample extends ApplicationAdapter {
 		final float height = Gdx.graphics.getWidth();
 		image1.setBounds(0, 0, width * 0.2f, height * 0.2f);
 		image2.setBounds(0.7f * width, 0.7f * height, 0.3f * width, 0.3f * height);
+		image1.addListener(new ClickListener() {
+
+			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				Gdx.app.debug(TAG, "left image clicked");
+			}
+
+		});
+		image2.addListener(new ClickListener() {
+
+			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				Gdx.app.debug(TAG, "right image clicked");
+			}
+
+		});
 	}
 
 	@Override
