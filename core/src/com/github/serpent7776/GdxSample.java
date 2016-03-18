@@ -29,7 +29,7 @@ public class GdxSample extends ApplicationAdapter {
 		stage.addActor(image1);
 		stage.addActor(image2);
 		final float width = Gdx.graphics.getWidth();
-		final float height = Gdx.graphics.getWidth();
+		final float height = Gdx.graphics.getHeight();
 		image1.setBounds(0, 0, width * 0.2f, height * 0.2f);
 		image2.setBounds(0.7f * width, 0.7f * height, 0.3f * width, 0.3f * height);
 		image1.addListener(new ClickListener() {
