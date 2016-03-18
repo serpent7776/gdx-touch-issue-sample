@@ -36,7 +36,7 @@ public class GdxSample extends ApplicationAdapter {
 
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Gdx.app.debug(TAG, "left image clicked");
+				Gdx.app.log(TAG, "left image clicked");
 			}
 
 		});
@@ -44,7 +44,7 @@ public class GdxSample extends ApplicationAdapter {
 
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				Gdx.app.debug(TAG, "right image clicked");
+				Gdx.app.log(TAG, "right image clicked");
 			}
 
 		});
