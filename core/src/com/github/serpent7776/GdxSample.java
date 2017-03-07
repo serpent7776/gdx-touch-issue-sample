@@ -69,6 +69,8 @@ public class GdxSample extends ApplicationAdapter {
 
 	@Override
 	public void resize(int w, int h) {
+		Gdx.app.log(TAG, "resizing to: " + w + "x" + h);
+		stage.getViewport().setScreenSize(w, h);
 		stage.getViewport().update(w, h);
 	}
 
