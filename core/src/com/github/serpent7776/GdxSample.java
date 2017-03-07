@@ -60,6 +60,11 @@ public class GdxSample extends ApplicationAdapter {
 	}
 
 	@Override
+	public void resize(int w, int h) {
+		stage.getViewport().update(w, h);
+	}
+
+	@Override
 	public void dispose () {
 		stage.dispose();
 	}
