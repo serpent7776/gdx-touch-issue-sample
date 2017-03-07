@@ -48,6 +48,14 @@ public class GdxSample extends ApplicationAdapter {
 			}
 
 		});
+		stage.getRoot().addListener(new ClickListener() {
+
+			@Override
+			public void clicked(InputEvent event, float x, float y) {
+				Gdx.app.log(TAG, "stage clicked at " + x + ", " + y);
+			}
+
+		});
 	}
 
 	@Override
